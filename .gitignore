@@ -1,2 +1,3 @@
 build/
 .DS_Store
+.clang-module-cache
