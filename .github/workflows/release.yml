@@ -24,8 +24,8 @@ jobs:
           DERIVED_DATA_PATH="$PROJECT_ROOT/build/DerivedData"
 
           xcodebuild \
-            -project "$PROJECT_ROOT/Key Status.xcodeproj" \
-            -scheme "Key Status" \
+            -project "$PROJECT_ROOT/KeyStatus.xcodeproj" \
+            -scheme "KeyStatus" \
             -configuration Release \
             -derivedDataPath "$DERIVED_DATA_PATH" \
             clean build \
@@ -36,15 +36,14 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p dist
-          APP_PATH="$GITHUB_WORKSPACE/build/DerivedData/Build/Products/Release/Key Status.app"
-          cp -R "$APP_PATH" "dist/Key Status.app"
-          xattr -cr "dist/Key Status.app" || true
+          APP_PATH="$GITHUB_WORKSPACE/build/DerivedData/Build/Products/Release/KeyStatus.app"
+          cp -R "$APP_PATH" "dist/KeyStatus.app"
+          xattr -cr "dist/KeyStatus.app" || true
           cd dist
-          zip -r "KeyStatus-macOS-${GITHUB_REF_NAME}.zip" "Key Status.app"
+          zip -r "KeyStatus-macOS-${GITHUB_REF_NAME}.zip" "KeyStatus.app"
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
           files: dist/KeyStatus-macOS-*.zip
           generate_release_notes: true
-
