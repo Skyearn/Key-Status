@@ -17,6 +17,7 @@ final class StatusItemController {
     private var inputSourceObserver: NSObjectProtocol?
     private var lastCapsLockState: Bool?
     private var lastStatusSignature: String?
+    private let localizedAppName = Locale.preferredLanguages.first?.hasPrefix("zh") == true ? "键态" : "KeyStatus"
 
     init(inputSourceService: InputSourceService) {
         _ = inputSourceService
@@ -82,13 +83,13 @@ final class StatusItemController {
 
     private func configureMenu() {
         let menu = NSMenu()
-        menu.addItem(NSMenuItem(title: "Key Status", action: nil, keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: localizedAppName, action: nil, keyEquivalent: ""))
         menu.addItem(.separator())
         let quitItem = NSMenuItem(title: "退出", action: #selector(quit), keyEquivalent: "q")
         quitItem.target = self
         menu.addItem(quitItem)
         statusItem.menu = menu
-        statusItem.button?.toolTip = "Key Status"
+        statusItem.button?.toolTip = localizedAppName
         statusItem.button?.imagePosition = .imageOnly
         statusItem.button?.font = .systemFont(ofSize: 12, weight: .bold)
         statusItem.button?.imageScaling = .scaleNone

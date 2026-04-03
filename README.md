@@ -1,6 +1,6 @@
-# Key Status
+# KeyStatus
 
-`Key Status` 是一个常驻菜单栏的 macOS 工具，用于在文本输入场景下显示当前输入状态。
+`KeyStatus` 是一个常驻菜单栏的 macOS 工具，用于在文本输入场景下显示当前输入状态。
 
 ## 当前功能
 
@@ -15,25 +15,25 @@
 - 跨应用监听基于 macOS Accessibility（AX）
 - 输入源读取基于 TIS（Text Input Source）
 - 焦点与状态变化检测逻辑在：
-  - `Key Status/FocusMonitor.swift`
-  - `Key Status/InputSourceService.swift`
+  - `KeyStatus/FocusMonitor.swift`
+  - `KeyStatus/InputSourceService.swift`
 - 浮层显示在：
-  - `Key Status/OverlayWindowController.swift`
+  - `KeyStatus/OverlayWindowController.swift`
 - 菜单栏图标与 App 图标更新在：
-  - `Key Status/StatusItemController.swift`
+  - `KeyStatus/StatusItemController.swift`
 
 ## 运行要求
 
 - macOS 14+
 - 首次运行需要授权：
-  - 系统设置 > 隐私与安全性 > 辅助功能 > `Key Status`
+  - 系统设置 > 隐私与安全性 > 辅助功能 > `KeyStatus`
 
 ## 构建方式
 
 ### Xcode
 
-1. 打开 `Key Status.xcodeproj`
-2. 选择 `Key Status` scheme
+1. 打开 `KeyStatus.xcodeproj`
+2. 选择 `KeyStatus` scheme
 3. Build / Run
 
 ### 命令行（推荐）
@@ -44,7 +44,7 @@
 
 最终产物路径：
 
-`./build/Key Status.app`
+`./build/KeyStatus.app`
 
 可选参数示例：
 
@@ -64,7 +64,7 @@
 建议做法：
 
 - 编译过程使用 `./build/DerivedData`
-- 对外测试使用 `./build/Key Status.app`
+- 对外测试使用 `./build/KeyStatus.app`
 - 若必须复制到其他目录后出现打不开，先检查该 `.app` 是否被附加了异常扩展属性（如 `com.apple.FinderInfo`）
 
 ## 已知限制

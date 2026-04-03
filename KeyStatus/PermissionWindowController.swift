@@ -2,6 +2,7 @@ import AppKit
 
 final class PermissionWindowController: NSWindowController {
     private let retryHandler: () -> Void
+    private let localizedAppName = Locale.preferredLanguages.first?.hasPrefix("zh") == true ? "键态" : "KeyStatus"
 
     init(retryHandler: @escaping () -> Void) {
         self.retryHandler = retryHandler
@@ -13,7 +14,7 @@ final class PermissionWindowController: NSWindowController {
             defer: false
         )
         window.center()
-        window.title = "Key Status"
+        window.title = localizedAppName
         window.contentViewController = PermissionViewController(retryHandler: retryHandler)
 
         super.init(window: window)
@@ -52,11 +53,11 @@ private final class PermissionViewController: NSViewController {
         let root = NSView()
         root.translatesAutoresizingMaskIntoConstraints = false
 
-        let titleLabel = NSTextField(wrappingLabelWithString: "Key Status 需要辅助功能权限")
+        let titleLabel = NSTextField(wrappingLabelWithString: "键态 需要辅助功能权限")
         titleLabel.font = .systemFont(ofSize: 24, weight: .bold)
 
         let descriptionLabel = NSTextField(
-            wrappingLabelWithString: "请在“系统设置 > 隐私与安全性 > 辅助功能”中允许 Key Status。授权后，应用会在任意程序里第一次进入文本输入状态时，显示当前输入法和 Caps Lock 状态。"
+            wrappingLabelWithString: "请在“系统设置 > 隐私与安全性 > 辅助功能”中允许 键态。授权后，应用会在任意程序里第一次进入文本输入状态时，显示当前输入法和 Caps Lock 状态。"
         )
         descriptionLabel.font = .systemFont(ofSize: 14)
         descriptionLabel.textColor = .secondaryLabelColor

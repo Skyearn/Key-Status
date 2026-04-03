@@ -5,7 +5,7 @@ enum DebugLogger {
         let fileManager = FileManager.default
         let libraryURL = fileManager.urls(for: .libraryDirectory, in: .userDomainMask).first
             ?? URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent("Library", isDirectory: true)
-        let logsDirectoryURL = libraryURL.appendingPathComponent("Logs/Key Status", isDirectory: true)
+        let logsDirectoryURL = libraryURL.appendingPathComponent("Logs/KeyStatus", isDirectory: true)
         try? fileManager.createDirectory(at: logsDirectoryURL, withIntermediateDirectories: true)
         return logsDirectoryURL.appendingPathComponent("key-status.log", isDirectory: false)
     }()

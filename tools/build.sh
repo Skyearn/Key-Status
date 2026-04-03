@@ -4,8 +4,8 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
-PROJECT_FILE="${PROJECT_ROOT}/Key Status.xcodeproj"
-SCHEME="Key Status"
+PROJECT_FILE="${PROJECT_ROOT}/KeyStatus.xcodeproj"
+SCHEME="KeyStatus"
 BUILD_ROOT="${PROJECT_ROOT}/build"
 DERIVED_DATA_PATH="${BUILD_ROOT}/DerivedData"
 
@@ -73,8 +73,8 @@ else
   xcodebuild "${XCODEBUILD_ARGS[@]}" build CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO
 fi
 
-PRODUCT_APP="${DERIVED_DATA_PATH}/Build/Products/${CONFIGURATION}/Key Status.app"
-OUTPUT_APP="${BUILD_ROOT}/Key Status.app"
+PRODUCT_APP="${DERIVED_DATA_PATH}/Build/Products/${CONFIGURATION}/KeyStatus.app"
+OUTPUT_APP="${BUILD_ROOT}/KeyStatus.app"
 
 if [[ ! -d "${PRODUCT_APP}" ]]; then
   echo "Build succeeded but app not found: ${PRODUCT_APP}" >&2

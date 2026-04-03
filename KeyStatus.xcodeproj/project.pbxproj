@@ -17,10 +17,11 @@
 		A00000000000000000000017 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000009 /* Resources */; };
 		A00000000000000000000018 /* DebugLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000000A /* DebugLogger.swift */; };
 		A00000000000000000000019 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000000B /* main.swift */; };
+		A0000000000000000000001A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000000D /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A00000000000000000000000 /* Key Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Key Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00000000000000000000000 /* KeyStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KeyStatus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A00000000000000000000001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A00000000000000000000002 /* FocusMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusMonitor.swift; sourceTree = "<group>"; };
 		A00000000000000000000003 /* InputSourceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSourceService.swift; sourceTree = "<group>"; };
@@ -32,6 +33,7 @@
 		A00000000000000000000009 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		A0000000000000000000000A /* DebugLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogger.swift; sourceTree = "<group>"; };
 		A0000000000000000000000B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A0000000000000000000000C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,12 +50,12 @@
 		A00000000000000000000030 = {
 			isa = PBXGroup;
 			children = (
-				A00000000000000000000031 /* Key Status */,
+				A00000000000000000000031 /* KeyStatus */,
 				A00000000000000000000032 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A00000000000000000000031 /* Key Status */ = {
+		A00000000000000000000031 /* KeyStatus */ = {
 			isa = PBXGroup;
 			children = (
 				A00000000000000000000001 /* AppDelegate.swift */,
@@ -66,15 +68,16 @@
 				A0000000000000000000000B /* main.swift */,
 				A00000000000000000000008 /* Assets.xcassets */,
 				A00000000000000000000009 /* Resources */,
+				A0000000000000000000000D /* InfoPlist.strings */,
 				A00000000000000000000006 /* Info.plist */,
 			);
-			path = "Key Status";
+			path = "KeyStatus";
 			sourceTree = "<group>";
 		};
 		A00000000000000000000032 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A00000000000000000000000 /* Key Status.app */,
+				A00000000000000000000000 /* KeyStatus.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,9 +85,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A00000000000000000000040 /* Key Status */ = {
+		A00000000000000000000040 /* KeyStatus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A00000000000000000000050 /* Build configuration list for PBXNativeTarget "Key Status" */;
+			buildConfigurationList = A00000000000000000000050 /* Build configuration list for PBXNativeTarget "KeyStatus" */;
 			buildPhases = (
 				A00000000000000000000021 /* Sources */,
 				A00000000000000000000020 /* Frameworks */,
@@ -94,9 +97,9 @@
 			);
 			dependencies = (
 			);
-			name = "Key Status";
-			productName = "Key Status";
-			productReference = A00000000000000000000000 /* Key Status.app */;
+			name = "KeyStatus";
+			productName = "KeyStatus";
+			productReference = A00000000000000000000000 /* KeyStatus.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -114,12 +117,13 @@
 					};
 				};
 			};
-			buildConfigurationList = A00000000000000000000051 /* Build configuration list for PBXProject "Key Status" */;
+			buildConfigurationList = A00000000000000000000051 /* Build configuration list for PBXProject "KeyStatus" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = A00000000000000000000030;
 			minimizedProjectReferenceProxies = 1;
@@ -128,7 +132,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A00000000000000000000040 /* Key Status */,
+				A00000000000000000000040 /* KeyStatus */,
 			);
 		};
 /* End PBXProject section */
@@ -140,10 +144,22 @@
 			files = (
 				A00000000000000000000016 /* Assets.xcassets in Resources */,
 				A00000000000000000000017 /* Resources in Resources */,
+				A0000000000000000000001A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A0000000000000000000000D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0000000000000000000000C /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A00000000000000000000021 /* Sources */ = {
@@ -177,7 +193,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Key Status/Info.plist";
+				INFOPLIST_FILE = "KeyStatus/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -205,7 +221,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Key Status/Info.plist";
+				INFOPLIST_FILE = "KeyStatus/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -237,7 +253,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A00000000000000000000050 /* Build configuration list for PBXNativeTarget "Key Status" */ = {
+		A00000000000000000000050 /* Build configuration list for PBXNativeTarget "KeyStatus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A00000000000000000000060 /* Debug */,
@@ -246,7 +262,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A00000000000000000000051 /* Build configuration list for PBXProject "Key Status" */ = {
+		A00000000000000000000051 /* Build configuration list for PBXProject "KeyStatus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A00000000000000000000062 /* Debug */,
